@@ -1,0 +1,30 @@
+<aura:component >
+	<aura:attribute type="String" name="header"/>
+    <aura:attribute name="body" type="Aura.Component[]"/>
+    <aura:attribute name="collpaseText" type="String" default="chevrondown"/>
+	<div class="slds">
+    <div class="sectionHeader">
+        <h2 class="title" >
+            <button class="slds-button slds-button--neutral sectionHeaderButton uiButton" onclick="{!c.toggleCollapse}">
+                <span class="slds-icon_container slds-icon-utility-chevrondown sectionChevronIcon slds-button__icon forceIcon">
+               
+                 <span aura:id="closeIcon" class="slds-hide">
+                    <c:svgIcon size="xx-small" class="fillColor" svgPath="{!'/img/slds-icons/v7.6.0/utility-sprite/svg/symbols.svg#chevrondown'}"/>
+                </span>
+                    
+                <span aura:id="openIcon">
+                    <c:svgIcon size="xx-small" class="fillColor" svgPath="{!'/img/slds-icons/v7.6.0/utility-sprite/svg/symbols.svg#chevronright'}"/>
+                </span>    
+                    
+                </span>
+                <span class="titleSpan">{!v.header}
+               
+                </span>
+            </button>
+        </h2>
+       </div>
+       <div class="sectionContainer slds-hide" aura:id="containerCollapsable">
+            {!v.body}
+        </div>
+       </div>
+</aura:component>
