@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>AshyaCircularProgressController</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
+		<members>AshyasvgIcon</members>
+		<members>AshyaCollapsablePanel</members>
+        <members>AshyaCircularProgressBar</members>
+		<members>AshyaDemoApplication</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <version>35.0</version>
